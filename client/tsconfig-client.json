@@ -1,0 +1,10 @@
+{
+	"extends": "../common/tsconfig-base.json",
+    "compilerOptions": {
+        "outFile": "./dist/l4w-client.js"
+    },
+    "include": [
+        "./src/**/*.ts",
+        "../common/src/**/*.ts"
+    ]
+}

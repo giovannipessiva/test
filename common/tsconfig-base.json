@@ -1,0 +1,14 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+		"target": "es6",
+        "moduleResolution": "node",
+        "sourceMap": false,
+
+        /* Good cop */
+        "strictPropertyInitialization": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "noUnusedParameters": false,
+        "noFallthroughCasesInSwitch": false,
+    }
+}
