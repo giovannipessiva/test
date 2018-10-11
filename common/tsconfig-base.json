@@ -9,6 +9,6 @@
         "strictPropertyInitialization": false,
         "suppressImplicitAnyIndexErrors": true,
         "noUnusedParameters": false,
-        "noFallthroughCasesInSwitch": false,
+        "noFallthroughCasesInSwitch": false
     }
 }

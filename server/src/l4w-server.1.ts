@@ -3,7 +3,7 @@ import path from "path"
 //@ts-ignore TS1192
 import express from "express";
 
-import { Constants } from "../../common/src/Constants"
+import { Constants, ValuesEnum } from "../../common/src/Constants"
 
 //TODO import.meta require target=esnext and module=esnext
 // see also: https://github.com/Microsoft/TypeScript/issues/24082
@@ -16,4 +16,6 @@ app.set("port",(process.env.PORT || 5000));
 // Views redirection
 app.get("/", function(request: Request, response: Response) {
     console.log(Constants.HttpStatus + " ");
+    console.log(ValuesEnum.DSA + " ");
+
 });

@@ -1,4 +1,4 @@
-namespace Constants { 
+export namespace Constants { 
 
     export enum HttpStatus {
         OK = 200,
@@ -17,4 +17,10 @@ namespace Constants {
         LOCATION = "Location"
     }
 
+};
+
+export enum ValuesEnum {
+    SAS = 1,
+    DSA = 2,
+    GDF = 3
 };

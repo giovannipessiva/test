@@ -48,8 +48,6 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks("grunt-ts");
-    grunt.loadNpmTasks("grunt-babel");
-    grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-contrib-clean");
     
