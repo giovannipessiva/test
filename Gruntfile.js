@@ -1,3 +1,5 @@
+const webpackConfig = require('./webpack.config.js');
+
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"), 
@@ -44,15 +46,19 @@ module.exports = function(grunt) {
                 ]
             }
         },
+
+        webpack: {
+            prod: webpackConfig,
+            dev: webpackConfig
+        }
  
     });
 
     grunt.loadNpmTasks("grunt-ts");
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-contrib-clean");
-    
+    grunt.loadNpmTasks("grunt-webpack");
 
-    grunt.registerTask("task_compile", "Execute ts (cannot fail)", ["ts:client","ts:server","copy","clean:post"]);
-    grunt.registerTask("l4w-build-pipeline", ["task_compile"]);
-	grunt.registerTask("default","l4w-build-pipeline");
+    grunt.registerTask("test_compile", "Execute ts (cannot fail)", ["ts:client","ts:server","copy","clean:post","webpack"]);
+	grunt.registerTask("default","test_compile");
 };
