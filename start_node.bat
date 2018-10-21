@@ -1,8 +1,3 @@
 @echo off
-:loop
 
-rem Run as Heroku local application (will use .env file)
-call heroku local -f Procfile_inspect
-
-echo Restarting...
-goto loop
+call node --experimental-modules server/dist/test/server/src/l4w-server.mjs

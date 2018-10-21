@@ -5,9 +5,6 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON("package.json"), 
 
         ts: {
-            client: {
-                tsconfig: "./client/tsconfig-client.json"
-            },
             server: {
                 tsconfig: "./server/tsconfig-server.json"
             }
@@ -59,6 +56,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-webpack");
 
-    grunt.registerTask("test_compile", "Execute ts (cannot fail)", ["ts:client","ts:server","copy","clean:post","webpack"]);
+    grunt.registerTask("test_compile", "Execute ts (cannot fail)", ["ts:server","copy","webpack","clean:post"]);
 	grunt.registerTask("default","test_compile");
 };
