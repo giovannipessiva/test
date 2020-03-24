@@ -1,4 +1,4 @@
-const webpackConfig = require('./webpack.config.js');
+const webpackConfig = require('./webpack.config.cjs');
 
 module.exports = function(grunt) {
     grunt.initConfig({
@@ -56,6 +56,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-webpack");
 
-    grunt.registerTask("test_compile", "Execute ts (cannot fail)", ["ts:server","copy","webpack","clean:post"]);
+    grunt.registerTask("test_compile", "Execute ts", ["ts:server","copy","webpack","clean:post"]);
 	grunt.registerTask("default","test_compile");
 };
