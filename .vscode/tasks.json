@@ -3,7 +3,8 @@
     "tasks": [
         {
             "type": "grunt",
-            "task": "l4w-build-pipeline",
+            "args": ["--gruntfile", "Gruntfile.cjs"],
+            "task": "test_compile",
             "group": {
                 "kind": "build",
                 "isDefault": true

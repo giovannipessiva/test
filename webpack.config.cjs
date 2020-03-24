@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
 	mode: "production",
@@ -8,11 +8,17 @@ module.exports = {
 	output: {
 		filename: "test123.webpacked.js",
 		library: "Test123",
-		path: path.resolve(__dirname, "client/dist"), // path: "./client/dist"
+		path: path.resolve(__dirname, "client/dist"),
 	},
 	devtool: "inline-source-map",
 	resolve: {
-        extensions: [ ".ts", ".js" ]
+		extensions: [
+			".ts",
+			".js"
+		],
+		alias: {
+			'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
+		}
 	},
 	module: {
 		rules: [

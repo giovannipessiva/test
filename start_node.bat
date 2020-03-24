@@ -1,3 +1,1 @@
-@echo off
-
-call node --experimental-modules server/dist/test/server/src/l4w-server.mjs
+call node --inspect --experimental-modules --es-module-specifier-resolution=node server/dist/test/server/src/l4w-server.mjs
